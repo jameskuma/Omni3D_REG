@@ -14,6 +14,8 @@
 * OO3D_NAME.txt: 存放 class 名称, 例如 anise_001
 * OO3D_MODEL_PATH.txt: 存放 OBJ 地址, 例如 /mnt/petrelfs/share_data/wutong/DATA/OO3D/data_scans/Align/anise/anise_001
 
+请注意, 考虑到存储大小, 目前设置为save_path仅保存30%的数据, 若需要更多path, 请修改参数`prec=0.3, line27 in run_save_path.py`
+
 运行`sh run_batch_cpoysh`
 
 会自动创建OO3D文件夹, 所有文件会copy到里面
