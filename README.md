@@ -27,9 +27,9 @@
 
 ## 第三步 批量COLMAP
 
-使用前请下载COLMAP对应的容器文件 (保存在我的google drive 不方便下载可以直接联系我)
+使用前请下载COLMAP对应的容器文件 (2G, 保存在我的google drive 不方便下载可以直接联系我)
 
-`wget https://docs.google.com/uc?export=download&id=${GOODLEID}&confirm=yes -O colmap_ok.sif --no-check-certificate`
+`wget 'https://docs.google.com/uc?export=download&id=1szbZWNSFL0lcV8KmrGo34QZsDQF4yr6c&confirm=yes' -O colmap_ok.sif`
 
 运行`sh run_batch_colmap.sh`
 
@@ -39,9 +39,9 @@
 
 ## 第四步 批量Registration & Save
 
-使用前请下载Open3d对应的容器文件 (保存在我的google drive 不方便下载可以直接联系我)
+使用前请下载Open3d对应的容器文件 (3G, 保存在我的google drive 不方便下载可以直接联系我)
 
-`wget https://docs.google.com/uc?export=download&id=${GOODLEID}&confirm=yes -O open3d_latest.sif --no-check-certificate`
+`wget 'https://docs.google.com/uc?export=download&id=1b91hPWeiSnYb_LSmphfFpWnr_XpgNVAL&confirm=yes' -O open3d_latest.sif`
 
 运行`sh run_batch_reg.sh`
 
