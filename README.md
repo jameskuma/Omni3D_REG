@@ -22,22 +22,26 @@
 
 运行`sh run_batch_filter.sh`
 
+* 这里批量Mask还是会存在问题
+* 修改Mask方法, 在`run_img_filter.py line44`
+
 ## 第三步 批量COLMAP
 
 使用前请下载COLMAP对应的容器文件 (保存在我的google drive 不方便下载可以直接联系我)
 
-``
+`wget https://docs.google.com/uc?export=download&id=${GOODLEID}&confirm=yes -O colmap_ok.sif --no-check-certificate`
 
 运行`sh run_batch_colmap.sh`
 
 * 调整COLMAP内部参数, 请在`run_sfm.sh`文件中修改，注意调整前记得备份 (这版参数是我跳出来效果最好的了2333)
 * 调整并行SFM数量, 请在`run_sfm.py`文件中修改`max_thread`参数即可
+* 因为COLMAP会产生较大的cache, 因此时不时可以运行`python run_clean_cahe.py`
 
 ## 第四步 批量Registration & Save
 
 使用前请下载Open3d对应的容器文件 (保存在我的google drive 不方便下载可以直接联系我)
 
-``
+`wget https://docs.google.com/uc?export=download&id=${GOODLEID}&confirm=yes -O open3d_latest.sif --no-check-certificate`
 
 运行`sh run_batch_reg.sh`
 
