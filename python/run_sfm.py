@@ -13,7 +13,7 @@ def run_sfm(root_path, gpu_id):
                     --SiftExtraction.estimate_affine_shape 1 \
                     --SiftExtraction.use_gpu 1 \
                     --ImageReader.single_camera 1"
-    print(cmd_one)
+
     os.system(cmd_one)
 
     # run matching
@@ -22,6 +22,7 @@ def run_sfm(root_path, gpu_id):
                     --SiftMatching.guided_matching 1 \
                     --SiftMatching.use_gpu 1'
     os.system(cmd_two)
+
     # sparse ba
     cmd_three = f'mkdir -p {root_path}/sparse'
     cmd_four = f'colmap mapper \
@@ -33,9 +34,11 @@ def run_sfm(root_path, gpu_id):
                     --Mapper.ba_global_max_num_iterations 75'
     os.system(cmd_three)
     os.system(cmd_four)
+
     # run dense dir generation
     cmd_five = f'mkdir -p {root_path}/dense'
     os.system(cmd_five)
+    
     # run image undistortion
     cmd_six = f'colmap image_undistorter \
                     --image_path {root_path}/masked_images \
