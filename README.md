@@ -32,3 +32,10 @@ cd Omni3D_REG
 sh scripts/run_sfm.sh 8 64 input_you_group_nodelist
 ```
 
+## Some tools
+1. Clean All Results
+
+```
+cd Omni3D_REG
+python python/run_clean_all.py.sh
+```
